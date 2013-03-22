@@ -18,4 +18,12 @@ Dependencies
 Tested on Ubuntu 12.04. 
 Python, Boto (2.8 at this time)
 
+Test
+----
+python test.py 
+can be used to make sure credentials are loaded and there is connectivity
+
+How to use?
+-----------
+I would run these via Cron
 

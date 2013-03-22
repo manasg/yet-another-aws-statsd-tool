@@ -1,0 +1,5 @@
+aws.conf
+endpoint.conf
+
+*.pyc
+

@@ -1,0 +1,4 @@
+[statsd]
+hostname = statsd_server.domain.com
+port = 8125
+
