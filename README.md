@@ -16,7 +16,7 @@ Yes, its public. But it is not a product. I view it as a set of scripts
 Dependencies
 ------------
 Tested on Ubuntu 12.04. 
-Python, Boto (2.8 at this time)
+Python, boto and statsd_client (installable via pip) 
 
 Test
 ----
