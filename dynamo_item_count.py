@@ -10,8 +10,11 @@ secret_key=config['Credentials']['aws_secret_access_key']
 conn = boto.connect_dynamodb(aws_access_key_id=access_key,
         aws_secret_access_key=secret_key)
 
-tableName = 'prod-ActiveUsers'
-table = conn.get_table(tableName)
+table_names = ['prod-ActiveUsers', 'stag-ActiveUsers', 'eng-ActiveUsers']
 
-client = StatsdClient(config['statsd']['hostname'], config['statsd']['port'])
-client.gauge("dynamodb.%s.item_count" % tableName, table.item_count)
+for name in table_names:
+    table = conn.get_table(name)
+
+    client = StatsdClient(config['statsd']['hostname'], config['statsd']['port'])
+    client.gauge("dynamodb.%s.item_count" % name, table.item_count)
+
