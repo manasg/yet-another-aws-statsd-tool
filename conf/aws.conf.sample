@@ -2,3 +2,6 @@
 aws_access_key_id = AKIdaaaadasssZQPadsa
 aws_secret_access_key = 1OgBdasfdskljgfgdaldfsdv
 
+[Sqs]
+region = us-east-1
+prefix = appname
